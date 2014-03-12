@@ -39,18 +39,19 @@ KeyboardInputManager.prototype.listen = function () {
   };
 
   document.addEventListener("keydown", function (event) {
-    var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
-                    event.shiftKey;
-    var mapped    = map[event.which];
+    // var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
+    //                 event.shiftKey;
+    // var mapped    = map[event.which];
 
-    if (!modifiers) {
-      if (mapped !== undefined) {
-        event.preventDefault();
-        self.emit("move", mapped);
-      }
+    // if (!modifiers) {
+    //   if (mapped !== undefined) {
+    //     event.preventDefault();
+    //     self.emit("move", mapped);
+    //   }
 
-      if (event.which === 32) self.restart.bind(self)(event);
-    }
+    //   if (event.which === 32) self.restart.bind(self)(event);
+    // }
+    self.emit("move", Math.random()*(3- 0)+ 0;)
   });
 
   var retry = document.getElementsByClassName("retry-button")[0];
